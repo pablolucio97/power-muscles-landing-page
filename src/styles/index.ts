@@ -6,6 +6,52 @@ export const Container = styled.div`
   width: 100%;
   overflow: hidden;
   background-color: ${({ theme }) => theme.colors.black300};
+
+  &.lightTitle {
+    color: ${({ theme }) => theme.colors.white100};
+  }
+  &.lightText {
+    color: ${({ theme }) => theme.colors.silver100};
+  }
+
+  &.testimonialCard {
+    background-color: ${({ theme }) => theme.colors.black100};
+    color: ${({ theme }) => theme.colors.white100};
+  }
+
+  &.metricIcon {
+    color: ${({ theme }) => theme.colors.secondary_light};
+    width: 32px;
+    height: 32px;
+  }
+
+  &.countUp {
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: 800;
+    font-size: ${({ theme }) => theme.sizes.xxhuge};
+    @media (max-width: 1080px) {
+      font-size: ${({ theme }) => theme.sizes.xhuge};
+    }
+    @media (max-width: 720px) {
+      font-size: ${({ theme }) => theme.sizes.huge};
+    }
+  }
+
+  &.collapsibleContent {
+    padding: 14px;
+    color: ${({ theme }) => theme.colors.secondary_light};
+    font-size: ${({ theme }) => theme.sizes.medium};
+  }
+
+  &.collapsibleContainer {
+    color: ${({ theme }) => theme.colors.primary_light};
+    font-weight: 800;
+  }
+  &.openedCollapsibleContainer {
+    color: ${({ theme }) => theme.colors.primary_light};
+    font-weight: 500;
+    padding: 14px 32px 0;
+  }
 `;
 
 export const BannerSection = styled.section`
@@ -49,7 +95,6 @@ export const FaqSection = styled.section`
   display: flex;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.black400};
-
 `;
 
 export const PurchaseSection = styled.section`
@@ -171,7 +216,7 @@ export const TestimonialsSectionContainer = styled.div`
 `;
 
 export const FaqSectionSectionContainer = styled.div`
-    display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -197,12 +242,11 @@ export const PurchaseSectionSectionContainer = styled.div`
     flex-direction: column;
   }
 
-  & p{
+  & p {
     width: 80%;
     text-align: center;
     margin: 24px auto 0;
   }
-
 `;
 
 export const CountUpContainer = styled.div`
@@ -214,8 +258,8 @@ export const CountUpContainer = styled.div`
 `;
 
 export const FaqSectionCollapsableContainer = styled.div`
-     background-color: ${({ theme }) => theme.colors.black300};
-     padding: 24px;
-     margin: 40px auto 0;
-     width: 100%;
-`
+  background-color: ${({ theme }) => theme.colors.black300};
+  padding: 24px;
+  margin: 40px auto 0;
+  width: 100%;
+`;

@@ -4,6 +4,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyle } from '../styles/globalstyle'
 import { theme } from '../themes/theme'
+import Layout from '../layout'
 
 function App({
   Component,
@@ -13,7 +14,9 @@ function App({
     <ThemeProvider theme={theme}>
       <ChakraProvider>
         <GlobalStyle />
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ChakraProvider>
     </ThemeProvider>
   )

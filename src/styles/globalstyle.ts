@@ -121,5 +121,23 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.white100};
   }
 
+  .metricIcon{
+    color: ${({ theme }) => theme.colors.secondary_light};
+    width: 32px;
+    height: 32px;
+  }
+
+  .countUp{
+    color: ${({ theme }) => theme.colors.primary};
+    font-weight: 800;
+    font-size: ${({ theme }) => theme.sizes.xxhuge};
+    @media(max-width: 1080px){
+      font-size: ${({ theme }) => theme.sizes.xhuge};
+    }
+    @media(max-width: 720px){
+      font-size: ${({ theme }) => theme.sizes.huge};
+    }
+  }
+
 
 `;

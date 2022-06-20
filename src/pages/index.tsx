@@ -1,4 +1,6 @@
 import type { NextPage } from 'next'
+const CountUp = dynamic(() => import('react-countup'), { ssr: false });
+
 import { useTheme } from 'styled-components'
 import { RevealFade } from '../components/Animations/RevealFade'
 import { PrimaryButton } from '../components/Elements/PrimaryButton'
@@ -10,6 +12,7 @@ import {
   BannerSection,
   BannerSectionContainer,
   Container,
+  CountUpContainer,
   IntroductionSection,
   IntroductionSectionContainer,
   IntroductionSectionContentContainer,
@@ -26,6 +29,8 @@ import { RevealZoom } from '../components/Animations/RevealZoom'
 import { CardSlider } from '../components/Elements/CardSlider'
 import { testimonials } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
+import { MdAccessibilityNew, MdOutlineHourglassBottom, MdOutlinePlayLesson } from 'react-icons/md'
+import dynamic from 'next/dynamic';
 
 const Home: NextPage = () => {
 
@@ -86,7 +91,64 @@ const Home: NextPage = () => {
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
-      <TestimonialsSection>
+      <MetricsSection>
+        <MetricsSectionContainer>
+          <Title
+            content='Números que falam por si só'
+            className='lightTitle'
+          />
+          <RevealZoom>
+            <CountUpContainer>
+              <CountUp
+                start={0}
+                end={97}
+                duration={4}
+                className='countUp'
+              />
+              <Text
+                content='Horas de conteúdo'
+                className='lightTitle'
+              />
+              <MdOutlineHourglassBottom
+                className='metricIcon'
+                
+              />
+            </CountUpContainer>
+          </RevealZoom>
+          <RevealZoom>
+            <CountUp
+              start={12}
+              end={182}
+              duration={3}
+              className='countUp'
+            />
+            <Text
+              content='Video aulas'
+              className='lightText'
+            />
+            <MdOutlinePlayLesson
+              className='metricIcon'
+            />
+          </RevealZoom>
+          <RevealZoom>
+            <CountUp
+              start={12}
+              end={455}
+              duration={4}
+              className='countUp'
+              prefix='+ de '
+            />
+            <Text
+              content='Alunos impactados'
+              className='lightText'
+            />
+            <MdAccessibilityNew
+              className='metricIcon'
+            />
+          </RevealZoom>
+        </MetricsSectionContainer>
+      </MetricsSection>
+      <TestimonialsSection id='testimonials'>
         <TestimonialsSectionContainer>
           <RevealFade>
             <Title

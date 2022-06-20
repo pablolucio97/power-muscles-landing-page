@@ -29,17 +29,19 @@ export const MetricsSection = styled.section`
   display: flex;
   width: 100%;
   height: 80vh;
-  background-color: ${({ theme }) => theme.colors.black400};
-  @media (max-width: 720px) {
-    flex-direction: column;
-  }
+  background: -webkit-linear-gradient(
+    -137deg,
+    rgb(31, 31, 31),
+    rgb(18, 18, 18)
+  );
+  background: linear-gradient(-137deg, rgb(31, 31, 31), rgb(18, 18, 18));
 `;
 
 export const TestimonialsSection = styled.section`
   display: flex;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.silver500};
-  background-image: url('/carbon-fibre.png');
+  background-image: url("/carbon-fibre.png");
 `;
 
 export const FaqSection = styled.section`
@@ -134,7 +136,7 @@ export const MetricsSectionContainer = styled.div`
   justify-content: center;
   width: 1900px;
   margin: 40px auto;
-  
+
   @media (max-width: 720px) {
     flex-direction: column;
   }
@@ -147,6 +149,7 @@ export const TestimonialsSectionContainer = styled.div`
   justify-content: center;
   width: 1900px;
   margin: 40px auto;
+
   @media (max-width: 1440px) {
     width: 80%;
   }
@@ -154,11 +157,11 @@ export const TestimonialsSectionContainer = styled.div`
     width: 80%;
   }
 
-  & h1{
-      margin: 0 auto 24px;
-    @media (max-width: 720px){
-        width: 100%;
-        text-align: center;
+  & h1 {
+    margin: 0 auto 24px;
+    @media (max-width: 720px) {
+      width: 100%;
+      text-align: center;
     }
   }
 `;
@@ -177,4 +180,12 @@ export const PurchaseSectionSectionContainer = styled.div`
   @media (max-width: 720px) {
     flex-direction: column;
   }
+`;
+
+export const CountUpContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
 `;

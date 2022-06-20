@@ -111,12 +111,13 @@ export default function Layout({ children }: LayoutProps) {
                 <HeaderLogoContainer>
                     <Logo
                         imageUrl='/logo.png'
+                        size={headerAnimation ? 'small' : 'medium'}
                     />
                 </HeaderLogoContainer>
                 <HeaderLinksContainer>
                     <HeaderLink
-                        content='Sobre nós'
-                        url='/'
+                        content='Sobre o instrutor'
+                        url='/#introduction'
                     />
                     <HeaderLink
                         content='Sobre o treinamento'

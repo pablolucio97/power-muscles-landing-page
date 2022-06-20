@@ -116,5 +116,10 @@ export const GlobalStyle = createGlobalStyle`
     color: ${({ theme }) => theme.colors.silver100};
   }
 
+  .testimonialCard{
+    background-color: ${({ theme }) => theme.colors.black100};
+    color: ${({ theme }) => theme.colors.white100};
+  }
+
 
 `;

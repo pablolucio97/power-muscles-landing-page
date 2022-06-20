@@ -4,7 +4,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 100vw;
-  background-color: ${({ theme }) => theme.colors.black100};
+  background-color: ${({ theme }) => theme.colors.black300};
   & .headerScrolling {
     position: fixed;
     background-color: ${({ theme }) => theme.colors.black100};
@@ -27,7 +27,7 @@ export const Container = styled.div`
     transition: all 0.3s ease;
   }
   &.lightTitle {
-    color: ${({ theme }) => theme.colors.white100100};
+    color: ${({ theme }) => theme.colors.white100};
   }
   & .lightText {
     color: ${({ theme }) => theme.colors.silver100};

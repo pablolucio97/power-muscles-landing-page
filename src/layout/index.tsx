@@ -94,12 +94,12 @@ export default function Layout({ children }: LayoutProps) {
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='O que dizem sobre o treinamento'
+                            content='O que nossos alunos dizem'
                             url='/#testimonials'
                             onClick={handleToggleDrawer}
                         />
                         <HeaderLink
-                            content='Quero queimar gordura'
+                            content='Quero mais músculos'
                             url='/#purchase'
                             onClick={handleToggleDrawer}
                         />
@@ -125,7 +125,7 @@ export default function Layout({ children }: LayoutProps) {
                 </HeaderLinksContainer>
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
-                        title='Quero queimar gordura'
+                        title='Quero mais músculos'
                         size='large'
                         onClick={() => { }}
                         style={{
@@ -149,7 +149,7 @@ export default function Layout({ children }: LayoutProps) {
                         url='/#metrics'
                     />
                     <FooterLink
-                        content='O que dizem sobre o treinamento'
+                        content='O que nossos alunos dizem'
                         url='/#testimonials'
                     />
                 </FooterFirstSection>

@@ -47,6 +47,7 @@ export const TestimonialsSection = styled.section`
 export const FaqSection = styled.section`
   display: flex;
   width: 100%;
+  background-color: ${({ theme }) => theme.colors.black100};
 `;
 
 export const PurchaseSection = styled.section`
@@ -167,7 +168,16 @@ export const TestimonialsSectionContainer = styled.div`
 `;
 
 export const FaqSectionSectionContainer = styled.div`
-  display: flex;
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1900px;
+  margin: 0 auto;
+  padding: 40px;
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
 `;
 
 export const PurchaseSectionSectionContainer = styled.div`
@@ -189,3 +199,9 @@ export const CountUpContainer = styled.div`
   align-items: center;
   padding: 24px;
 `;
+
+export const FaqSectionCollapsableContainer = styled.div`
+     background-color: ${({ theme }) => theme.colors.black500};
+     padding: 24px;
+     margin: 40px auto 0;
+`

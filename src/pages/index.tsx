@@ -13,6 +13,9 @@ import {
   BannerSectionContainer,
   Container,
   CountUpContainer,
+  FaqSection,
+  FaqSectionCollapsableContainer,
+  FaqSectionSectionContainer,
   IntroductionSection,
   IntroductionSectionContainer,
   IntroductionSectionContentContainer,
@@ -31,6 +34,8 @@ import { testimonials } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { MdAccessibilityNew, MdOutlineHourglassBottom, MdOutlinePlayLesson } from 'react-icons/md'
 import dynamic from 'next/dynamic';
+import { SubTitle } from '../components/Typography/SubTitle';
+import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo';
 
 const Home: NextPage = () => {
 
@@ -84,8 +89,8 @@ const Home: NextPage = () => {
             <RevealZoom>
               <NextImage
                 height={400}
-                width={400}
-                imgUrl='/gym3.jpg'
+                width={320}
+                imgUrl='/professor.png'
               />
             </RevealZoom>
           </IntroductionSectionImageContainer>
@@ -111,7 +116,7 @@ const Home: NextPage = () => {
               />
               <MdOutlineHourglassBottom
                 className='metricIcon'
-                
+
               />
             </CountUpContainer>
           </RevealZoom>
@@ -178,6 +183,86 @@ const Home: NextPage = () => {
           </CardSlider>
         </TestimonialsSectionContainer>
       </TestimonialsSection>
+      <FaqSection id='faq'>
+        <FaqSectionSectionContainer>
+          <Title
+            content='Perguntas frequentes'
+            className='lightTitle'
+          />
+          <FaqSectionCollapsableContainer>
+            <CollapsibleInfo
+              title='O acesso é vitalício?'
+              content='Sim. O acesso ao treinamento é vitalício.'
+              contentContainerClassName='collapsibleContent'
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
+              contentClassName='collapsibleContent'
+            />
+            <CollapsibleInfo
+              title='De onde posso acessar o treinamento?'
+              content='Você pode acessar o treinamento de qualquer dispositivo com conexão com a internet.'
+              contentContainerClassName='collapsibleContent'
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
+              contentClassName='collapsibleContent'
+
+            />
+            <CollapsibleInfo
+              title='Vou ter suporte para dúvidas?'
+              content='Sim. Você tera direito a suporte de segunda à sexta, exceto feriados.'
+              contentContainerClassName='collapsibleContent'
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
+              contentClassName='collapsibleContent'
+
+            />
+            <CollapsibleInfo
+              title='Existe um grupo de apoio?'
+              content='Sim. Ao adquirir o treinamento, você terá livre acesso ao nosso grupo do Whatsapp.'
+              contentContainerClassName='collapsibleContent'
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
+              contentClassName='collapsibleContent'
+
+            />
+            <CollapsibleInfo
+              title='Posso pedir reembolso?'
+              content='Sim. Caso você não goste do treinamento por qualquer motivo, você tem 7 dias úteis para pedir reembolso.'
+              contentContainerClassName='collapsibleContent'
+              titleClassName='collapsibleContainer'
+              openedTitleClassName='openedCollapsibleContainer'
+              contentClassName='collapsibleContent'
+            />
+          </FaqSectionCollapsableContainer>
+        </FaqSectionSectionContainer>
+      </FaqSection>
+      <PurchaseSection id='purchase'>
+        <PurchaseSectionSectionContainer>
+          <SubTitle
+            content='Satisfação garantida'
+          />
+          <Text
+            content='Você tem 7 dias úteis para avaliar se o treinamento faz sentido para você, caso contrário, devolvemos seu dinheiro.'
+            className='lightText'
+          />
+          <NextImage
+            width={240}
+            height={240}
+            imgUrl='/image_seeds/warrant_seal3.png'
+            className='nextImage'
+            style={{ margin: 'auto' }}
+          />
+          <PrimaryButton
+            title='Adquirir curso'
+            onClick={() => { }}
+            style={{
+              backgroundColor: theme.colors.primary
+            }}
+          />
+        </PurchaseSectionSectionContainer>
+
+      </PurchaseSection>
+
     </Container>
   )
 }

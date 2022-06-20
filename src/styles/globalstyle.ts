@@ -139,5 +139,22 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
+  .collapsibleContent{
+    padding: 14px;
+    color: ${({ theme }) => theme.colors.white200};
+  }
+  
+  .collapsibleContainer{
+    color: ${({ theme }) => theme.colors.primary_light};
+    font-weight: 800;
+  }
+  .openedCollapsibleContainer{
+    color: ${({ theme }) => theme.colors.primary_light};
+    font-weight: 500;
+    padding: 14px 32px 0;
+  }
+
+  
+
 
 `;

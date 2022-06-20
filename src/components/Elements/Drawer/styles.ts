@@ -24,9 +24,9 @@ export const Container = styled.div<DrawerProps>`
   top: 0;
   left: ${({ direction }) => (direction === "left" ? 0 : 300)};
   right: ${({ direction }) => (direction === "left" ? 300 : 0)};
-  border-left: ${({ direction, theme }) => (direction === "right" ? `1px solid ${theme.colors.silver}` : null)};
-  border-right: ${({ direction, theme }) => (direction === "left" ? `1px solid ${theme.colors.silver}` : null)};
-  border-bottom: ${({ direction, theme }) => (direction === "top" ? `1px solid ${theme.colors.silver}` : null)};
+  border-left: ${({ direction, theme }) => (direction === "right" ? `1px solid ${theme.colors.silver100}` : null)};
+  border-right: ${({ direction, theme }) => (direction === "left" ? `1px solid ${theme.colors.silver100}` : null)};
+  border-bottom: ${({ direction, theme }) => (direction === "top" ? `1px solid ${theme.colors.silver100}` : null)};
   right: ${({ direction }) => (direction === "left" ? 300 : 0)};
   z-index: 999;
   animation: ${({ direction }) =>
@@ -48,7 +48,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.black};
+  color: ${({ theme }) => theme.colors.black100};
   text-transform: capitalize;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};

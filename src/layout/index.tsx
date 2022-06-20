@@ -98,11 +98,16 @@ export default function Layout({ children }: LayoutProps) {
                             url='/#testimonials'
                             onClick={handleToggleDrawer}
                         />
-                        <HeaderLink
-                            content='Quero mais músculos'
-                            url='/#purchase'
-                            onClick={handleToggleDrawer}
-                        />
+                        <PrimaryButton
+                        title='Quero mais músculos'
+                        size='large'
+                        onClick={() => { }}
+                        style={{
+                            backgroundColor: theme.colors.primary,
+                            margin: 'auto',
+                            marginTop: '24px'
+                        }}
+                    />
                     </Drawer>
                 }
                 <DrawerButton

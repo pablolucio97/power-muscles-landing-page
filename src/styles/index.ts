@@ -5,6 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   width: 100%;
   overflow: hidden;
+  background-color: ${({ theme }) => theme.colors.black300};
 `;
 
 export const BannerSection = styled.section`
@@ -47,13 +48,15 @@ export const TestimonialsSection = styled.section`
 export const FaqSection = styled.section`
   display: flex;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.black100};
+  background-color: ${({ theme }) => theme.colors.black400};
+
 `;
 
 export const PurchaseSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
+  background-color: ${({ theme }) => theme.colors.primary_dark};
 `;
 
 export const BannerSectionContainer = styled.div`
@@ -173,8 +176,10 @@ export const FaqSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1900px;
-  margin: 0 auto;
   padding: 40px;
+  margin: 0 auto;
+  background-color: ${({ theme }) => theme.colors.black400};
+
   @media (max-width: 720px) {
     flex-direction: column;
   }
@@ -186,10 +191,18 @@ export const PurchaseSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1900px;
-  background-color: ${({ theme }) => theme.colors.black400};
+  background-color: ${({ theme }) => theme.colors.primary_dark};
+  padding: 40px;
   @media (max-width: 720px) {
     flex-direction: column;
   }
+
+  & p{
+    width: 80%;
+    text-align: center;
+    margin: 24px auto 0;
+  }
+
 `;
 
 export const CountUpContainer = styled.div`
@@ -201,7 +214,8 @@ export const CountUpContainer = styled.div`
 `;
 
 export const FaqSectionCollapsableContainer = styled.div`
-     background-color: ${({ theme }) => theme.colors.black500};
+     background-color: ${({ theme }) => theme.colors.black300};
      padding: 24px;
      margin: 40px auto 0;
+     width: 100%;
 `

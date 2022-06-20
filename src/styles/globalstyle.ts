@@ -141,7 +141,7 @@ export const GlobalStyle = createGlobalStyle`
 
   .collapsibleContent{
     padding: 14px;
-    color: ${({ theme }) => theme.colors.white200};
+    color: ${({ theme }) => theme.colors.secondary_light};
   }
   
   .collapsibleContainer{

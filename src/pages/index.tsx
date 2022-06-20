@@ -36,6 +36,7 @@ import { MdAccessibilityNew, MdOutlineHourglassBottom, MdOutlinePlayLesson } fro
 import dynamic from 'next/dynamic';
 import { SubTitle } from '../components/Typography/SubTitle';
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo';
+import { RevealFlip } from '../components/Animations/RevealFlip';
 
 const Home: NextPage = () => {
 
@@ -71,7 +72,6 @@ const Home: NextPage = () => {
               />
             </RevealFade>
             <RevealFade>
-
               <Text
                 content='Para quem não me conhece, meu nome é Bruno Fernandes, serei seu instrutor no programa MusclePowers. Sou formado em Educação Fisica e pós-graduado em Fisiologia do Exercício.'
                 className='lightText'
@@ -185,10 +185,12 @@ const Home: NextPage = () => {
       </TestimonialsSection>
       <FaqSection id='faq'>
         <FaqSectionSectionContainer>
+          <RevealFade>
           <Title
             content='Perguntas frequentes'
             className='lightTitle'
           />
+          </RevealFade>
           <FaqSectionCollapsableContainer>
             <CollapsibleInfo
               title='O acesso é vitalício?'
@@ -238,26 +240,29 @@ const Home: NextPage = () => {
       </FaqSection>
       <PurchaseSection id='purchase'>
         <PurchaseSectionSectionContainer>
-          <SubTitle
-            content='Satisfação garantida'
-          />
+          <RevealFade>
+            <Title
+              content='Satisfação garantida'
+              className='lightTitle'
+            />
+          </RevealFade>
           <Text
             content='Você tem 7 dias úteis para avaliar se o treinamento faz sentido para você, caso contrário, devolvemos seu dinheiro.'
             className='lightText'
           />
-          <NextImage
-            width={240}
-            height={240}
-            imgUrl='/image_seeds/warrant_seal3.png'
-            className='nextImage'
-            style={{ margin: 'auto' }}
-          />
+          <RevealFlip>
+            <NextImage
+              width={240}
+              height={240}
+              imgUrl='/image_seeds/warrant_seal3.png'
+              className='nextImage'
+              style={{ margin: 'auto' }}
+            />
+          </RevealFlip>
           <PrimaryButton
-            title='Adquirir curso'
+            title='Quero mais músculos'
             onClick={() => { }}
-            style={{
-              backgroundColor: theme.colors.primary
-            }}
+            size='large'
           />
         </PurchaseSectionSectionContainer>
 

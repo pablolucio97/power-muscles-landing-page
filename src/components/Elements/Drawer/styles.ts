@@ -6,12 +6,12 @@ interface DrawerProps {
 
 const menuAnimationVertical = keyframes`
     0%{height: 0px};
-    100%{height: 24vh};
+    100%{min-height: 24vh};
 `;
 
 const menuAnimationHorizontal = keyframes`
   0%{width: 0px};
-  100%{width: 280px};
+  100%{min-width: 280px};
 `;
 
 export const Container = styled.div<DrawerProps>`
@@ -48,7 +48,7 @@ export const MenuContainer = styled.div`
 `;
 
 export const MenuItem = styled.a`
-  color: ${({ theme }) => theme.colors.black100};
+  color: ${({ theme }) => theme.colors.black};
   text-transform: capitalize;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};

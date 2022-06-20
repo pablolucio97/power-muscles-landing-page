@@ -109,4 +109,12 @@ export const GlobalStyle = createGlobalStyle`
     transition: all 0.3s ease;
   }
 
+  .lightTitle {
+    color: ${({ theme }) => theme.colors.white100};
+  }
+   .lightText {
+    color: ${({ theme }) => theme.colors.silver100};
+  }
+
+
 `;

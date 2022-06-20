@@ -7,7 +7,6 @@ import { PrimaryButton } from '../components/Elements/PrimaryButton'
 import { GradientText } from '../components/Typography/GradientText'
 import { Title } from '../components/Typography/Title'
 import { Text } from '../components/Typography/Text'
-import { PricingCard } from '../components/Cards/PricingCard'
 import {
   BannerSection,
   BannerSectionContainer,
@@ -34,7 +33,6 @@ import { testimonials } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { MdAccessibilityNew, MdOutlineHourglassBottom, MdOutlinePlayLesson } from 'react-icons/md'
 import dynamic from 'next/dynamic';
-import { SubTitle } from '../components/Typography/SubTitle';
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo';
 import { RevealFlip } from '../components/Animations/RevealFlip';
 
@@ -44,7 +42,7 @@ const Home: NextPage = () => {
 
   return (
     <Container>
-      <BannerSection>
+      <BannerSection id='banner'>
         <BannerSectionContainer id='banner'>
           <RevealFade
             bottom
@@ -96,7 +94,7 @@ const Home: NextPage = () => {
           </IntroductionSectionImageContainer>
         </IntroductionSectionContainer>
       </IntroductionSection>
-      <MetricsSection>
+      <MetricsSection id='metrics'>
         <MetricsSectionContainer>
           <Title
             content='Números que falam por si só'
@@ -186,10 +184,10 @@ const Home: NextPage = () => {
       <FaqSection id='faq'>
         <FaqSectionSectionContainer>
           <RevealFade>
-          <Title
-            content='Perguntas frequentes'
-            className='lightTitle'
-          />
+            <Title
+              content='Perguntas frequentes'
+              className='lightTitle'
+            />
           </RevealFade>
           <FaqSectionCollapsableContainer>
             <CollapsibleInfo
@@ -267,7 +265,6 @@ const Home: NextPage = () => {
         </PurchaseSectionSectionContainer>
 
       </PurchaseSection>
-
     </Container>
   )
 }

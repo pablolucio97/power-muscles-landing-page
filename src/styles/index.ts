@@ -139,7 +139,7 @@ export const BannerSectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 500px;
+  width: 1900px;
   background-image: url('/gym_banner.jpg');
   background-repeat: no-repeat;
   background-size: cover;

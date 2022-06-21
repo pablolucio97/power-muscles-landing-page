@@ -110,7 +110,7 @@ const Home: NextPage = () => {
               />
               <Text
                 content='Horas de conteúdo'
-                className='lightTitle'
+                className='lightText'
               />
               <MdOutlineHourglassBottom
                 className='metricIcon'

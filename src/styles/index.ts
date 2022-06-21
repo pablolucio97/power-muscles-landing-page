@@ -70,6 +70,10 @@ export const IntroductionSection = styled.section`
   width: 100%;
   min-height: 88vh;
   background-color: ${({ theme }) => theme.colors.black300};
+
+  & h1{
+    color:  ${({ theme }) => theme.colors.white100};
+  }
 `;
 
 export const MetricsSection = styled.section`
@@ -82,6 +86,9 @@ export const MetricsSection = styled.section`
     rgb(18, 18, 18)
   );
   background: linear-gradient(-137deg, rgb(31, 31, 31), rgb(18, 18, 18));
+  & h1{
+    color:  ${({ theme }) => theme.colors.white100};
+  }
 `;
 
 export const TestimonialsSection = styled.section`
@@ -89,12 +96,18 @@ export const TestimonialsSection = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.silver500};
   background-image: url("/carbon-fibre.png");
+  & h1{
+    color:  ${({ theme }) => theme.colors.white100};
+  }
 `;
 
 export const FaqSection = styled.section`
   display: flex;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.black400};
+  & h1{
+    color:  ${({ theme }) => theme.colors.white100};
+  }
 `;
 
 export const PurchaseSection = styled.section`
@@ -102,6 +115,9 @@ export const PurchaseSection = styled.section`
   justify-content: center;
   width: 100%;
   background-color: ${({ theme }) => theme.colors.primary_dark};
+  & h1{
+    color:  ${({ theme }) => theme.colors.white100};
+  }
 `;
 
 export const BannerSectionContainer = styled.div`

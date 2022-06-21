@@ -74,7 +74,7 @@ export default function Layout({ children }: LayoutProps) {
         <Container id='top'>
             <TopScrollButton
                 className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
-                icon={<MdArrowUpward />}
+                icon={<MdArrowUpward color={theme.colors.black300} />}
                 elementReferenceId='top'
             />
             <Header

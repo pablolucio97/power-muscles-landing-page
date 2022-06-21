@@ -155,7 +155,6 @@ export const GlobalStyle = createGlobalStyle`
     padding: 14px 32px 0;
   }
 
-  
 
 
 `;

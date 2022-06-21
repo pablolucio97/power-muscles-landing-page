@@ -29,8 +29,8 @@ export function Logo({
                 <Image
                     src={imageUrl}
                     alt='logo'
-                    width='100%'
-                    height='100%'
+                    width={48}
+                    height={48}
                 />
             </Link>
 

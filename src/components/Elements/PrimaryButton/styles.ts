@@ -29,6 +29,7 @@ export const Container = styled.button<PrimaryButtonProps>`
   }
   @media (max-width: 720px) {
     font-size: ${({ theme }) => theme.sizes.normal};
+    max-width: 188px;
   }
 `;
 

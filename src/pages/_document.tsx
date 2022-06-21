@@ -9,11 +9,13 @@ export default class MyDocument extends Document {
     render() {
         return (
             <Html>
+
                 <Head>
-                    <meta name="description" content="pablosilvadev" />
-                    <meta name="keywords" content="pablosilvadev " />
-                    <meta name='author' content='pablosilvadev' />
-                    <meta name='author' content='pablosilvadev' />
+                    {/* @ts-ignore */}
+                    <meta charset="UTF-8"/>
+                    <meta name="description" content="Landing pages de alta conversão" />
+                    <meta name="keywords" content="pablosilvadev pablo silva psd landing pages " />
+                    <meta name='author' content='Pablo Silva' />
                     <meta name="theme-color" content="#000000" />
                     <link rel="preload" as="font"></link>
                     <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Open+Sans:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet"></link>

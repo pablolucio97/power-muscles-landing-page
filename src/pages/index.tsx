@@ -35,6 +35,7 @@ import { MdAccessibilityNew, MdOutlineHourglassBottom, MdOutlinePlayLesson } fro
 import dynamic from 'next/dynamic';
 import { CollapsibleInfo } from '../components/Elements/CollapsibleInfo';
 import { RevealFlip } from '../components/Animations/RevealFlip';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
 
@@ -42,6 +43,17 @@ const Home: NextPage = () => {
 
   return (
     <Container>
+      <Head>
+        <title>PowerMuscles | PabloSilvaDev</title>
+        {/* @ts-ignore */}
+        <meta charset="UTF-8" />
+        <meta name="description" content="Landing pages de alta conversão" />
+        <meta name="keywords" content="pablosilvadev pablo silva psd landing pages " />
+        <meta name='author' content='Pablo Silva' />
+        <meta name="theme-color" content="#000000" />
+        <link rel="preload" as="font"></link>
+
+      </Head>
       <BannerSection id='banner'>
         <BannerSectionContainer id='banner'>
           <RevealFade
@@ -57,6 +69,7 @@ const Home: NextPage = () => {
           <PrimaryButton
             onClick={() => { }}
             title='Começar agora'
+            ariaLabel='Começar curso'
           />
         </BannerSectionContainer>
       </BannerSection>
@@ -114,7 +127,6 @@ const Home: NextPage = () => {
               />
               <MdOutlineHourglassBottom
                 className='metricIcon'
-
               />
             </CountUpContainer>
           </RevealZoom>
@@ -234,6 +246,7 @@ const Home: NextPage = () => {
             title='Quero mais músculos'
             onClick={() => { }}
             size='large'
+            ariaLabel='Começar curso'
           />
         </PurchaseSectionSectionContainer>
 

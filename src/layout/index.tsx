@@ -1,3 +1,4 @@
+import Head from 'next/head';
 import { ReactNode, useEffect, useState } from 'react';
 import { MdArrowUpward } from 'react-icons/md';
 import { useTheme } from 'styled-components';
@@ -71,11 +72,13 @@ export default function Layout({ children }: LayoutProps) {
     }, [])
 
     return (
+
         <Container id='top'>
             <TopScrollButton
                 className={scrollTopAnimation ? 'animatedTopScroll' : 'normalTopScroll'}
                 icon={<MdArrowUpward color={theme.colors.black300} />}
                 elementReferenceId='top'
+                ariaLabel='Voltar ao início'
             />
             <Header
                 className={headerAnimation ? 'headerScrolling' : 'headerNotScrolling'}
@@ -99,15 +102,16 @@ export default function Layout({ children }: LayoutProps) {
                             onClick={handleToggleDrawer}
                         />
                         <PrimaryButton
-                        title='Quero mais músculos'
-                        size='large'
-                        onClick={() => { }}
-                        style={{
-                            backgroundColor: theme.colors.primary,
-                            margin: 'auto',
-                            marginTop: '24px'
-                        }}
-                    />
+                            title='Quero mais músculos'
+                            ariaLabel='Começar curso'
+                            size='large'
+                            onClick={() => { }}
+                            style={{
+                                backgroundColor: theme.colors.primary,
+                                margin: 'auto',
+                                marginTop: '24px'
+                            }}
+                        />
                     </Drawer>
                 }
                 <DrawerButton
@@ -132,6 +136,7 @@ export default function Layout({ children }: LayoutProps) {
                 <HeaderAuthenticationContainer>
                     <PrimaryButton
                         title='Quero mais músculos'
+                        ariaLabel='Começar curso'
                         size='large'
                         onClick={() => { }}
                         style={{

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import gymBg from '../../public/image_seeds/gym_banner.png'
 
 export const Container = styled.div`
   display: flex;
@@ -138,10 +139,10 @@ export const BannerSectionContainer = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 1900px;
-  background-image: url("gym_banner.png");
+  width: 500px;
+  background-image: url('/gym_banner.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
 
   & p {
     color: ${({ theme }) => theme.colors.primary};
@@ -171,6 +172,8 @@ export const BannerSectionContainer = styled.div`
     }
   }
 `;
+
+
 
 export const IntroductionSectionContainer = styled.div`
   display: flex;

@@ -29,7 +29,7 @@ import {
 import { NextImage } from '../components/Next/NextImage'
 import { RevealZoom } from '../components/Animations/RevealZoom'
 import { CardSlider } from '../components/Elements/CardSlider'
-import { testimonials } from '../data/data'
+import { faqData, testimonials } from '../data/data'
 import { TestimonialCard } from '../components/Cards/TestimonialCard'
 import { MdAccessibilityNew, MdOutlineHourglassBottom, MdOutlinePlayLesson } from 'react-icons/md'
 import dynamic from 'next/dynamic';
@@ -172,10 +172,9 @@ const Home: NextPage = () => {
                 testimonial={person.testimonial}
                 ratings={person.ratings}
                 personPhotoUrl={person.url}
-                cardClassName='testimonialCard'
-                testimonialClassName='lightText'
-                titleClassName='lightText'
-
+                cardStyle={{ backgroundColor: theme.colors.black100 }}
+                testimonialTextStyle={{ color: theme.colors.white300 }}
+                titleStyle={{ color: theme.colors.secondary }}
               />
             ))}
           </CardSlider>
@@ -190,49 +189,23 @@ const Home: NextPage = () => {
             />
           </RevealFade>
           <FaqSectionCollapsableContainer>
-            <CollapsibleInfo
-              title='O acesso é vitalício?'
-              content='Sim. O acesso ao treinamento é vitalício.'
-              contentContainerClassName='collapsibleContent'
-              titleClassName='collapsibleContainer'
-              openedTitleClassName='openedCollapsibleContainer'
-              contentClassName='collapsibleContent'
-            />
-            <CollapsibleInfo
-              title='De onde posso acessar o treinamento?'
-              content='Você pode acessar o treinamento de qualquer dispositivo com conexão com a internet.'
-              contentContainerClassName='collapsibleContent'
-              titleClassName='collapsibleContainer'
-              openedTitleClassName='openedCollapsibleContainer'
-              contentClassName='collapsibleContent'
+            {faqData.map(question => (
+              <CollapsibleInfo
+                key={question.title}
+                title={question.title}
+                content={question.content}
+                contentContainerClassName='collapsibleContent'
+                titleClassName='collapsibleContainer'
+                openedTitleClassName='openedCollapsibleContainer'
+                contentClassName='collapsibleContent'
+                contentStyle={{
+                  padding: 14,
+                  color: theme.colors.secondary_light,
+                  fontSize: theme.sizes.medium
+                }}
 
-            />
-            <CollapsibleInfo
-              title='Vou ter suporte para dúvidas?'
-              content='Sim. Você tera direito a suporte de segunda à sexta, exceto feriados.'
-              contentContainerClassName='collapsibleContent'
-              titleClassName='collapsibleContainer'
-              openedTitleClassName='openedCollapsibleContainer'
-              contentClassName='collapsibleContent'
-
-            />
-            <CollapsibleInfo
-              title='Existe um grupo de apoio?'
-              content='Sim. Ao adquirir o treinamento, você terá livre acesso ao nosso grupo do Whatsapp.'
-              contentContainerClassName='collapsibleContent'
-              titleClassName='collapsibleContainer'
-              openedTitleClassName='openedCollapsibleContainer'
-              contentClassName='collapsibleContent'
-
-            />
-            <CollapsibleInfo
-              title='Posso pedir reembolso?'
-              content='Sim. Caso você não goste do treinamento por qualquer motivo, você tem 7 dias úteis para pedir reembolso.'
-              contentContainerClassName='collapsibleContent'
-              titleClassName='collapsibleContainer'
-              openedTitleClassName='openedCollapsibleContainer'
-              contentClassName='collapsibleContent'
-            />
+              />
+            ))}
           </FaqSectionCollapsableContainer>
         </FaqSectionSectionContainer>
       </FaqSection>

@@ -42,16 +42,23 @@ export const Container = styled.div`
     color: ${({ theme }) => theme.colors.secondary_light};
     font-size: ${({ theme }) => theme.sizes.medium};
   }
+  &.collapsibleContent {
+    padding: 14px;
+    color: ${({ theme }) => theme.colors.secondary_light};
+    font-size: ${({ theme }) => theme.sizes.medium};
+  }
 
   &.collapsibleContainer {
     color: ${({ theme }) => theme.colors.primary_light};
     font-weight: 800;
   }
+
   &.openedCollapsibleContainer {
     color: ${({ theme }) => theme.colors.primary_light};
     font-weight: 500;
     padding: 14px 32px 0;
   }
+
 `;
 
 export const BannerSection = styled.section`
@@ -71,8 +78,8 @@ export const IntroductionSection = styled.section`
   min-height: 88vh;
   background-color: ${({ theme }) => theme.colors.black300};
 
-  & h1{
-    color:  ${({ theme }) => theme.colors.white100};
+  & h1 {
+    color: ${({ theme }) => theme.colors.white100};
   }
 `;
 
@@ -86,8 +93,8 @@ export const MetricsSection = styled.section`
     rgb(18, 18, 18)
   );
   background: linear-gradient(-137deg, rgb(31, 31, 31), rgb(18, 18, 18));
-  & h1{
-    color:  ${({ theme }) => theme.colors.white100};
+  & h1 {
+    color: ${({ theme }) => theme.colors.white100};
   }
 `;
 
@@ -96,17 +103,22 @@ export const TestimonialsSection = styled.section`
   width: 100%;
   background-color: ${({ theme }) => theme.colors.silver500};
   background-image: url("/carbon-fibre.png");
-  & h1{
-    color:  ${({ theme }) => theme.colors.white100};
+  & h1 {
+    color: ${({ theme }) => theme.colors.white100};
   }
 `;
 
 export const FaqSection = styled.section`
   display: flex;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.black400};
-  & h1{
-    color:  ${({ theme }) => theme.colors.white100};
+  background: -webkit-linear-gradient(
+    -137deg,
+    rgb(31, 31, 31),
+    rgb(18, 18, 18)
+  );
+  background: linear-gradient(-137deg, rgb(31, 31, 31), rgb(18, 18, 18));
+  & h1 {
+    color: ${({ theme }) => theme.colors.white100};
   }
 `;
 
@@ -114,9 +126,10 @@ export const PurchaseSection = styled.section`
   display: flex;
   justify-content: center;
   width: 100%;
-  background-color: ${({ theme }) => theme.colors.primary_dark};
-  & h1{
-    color:  ${({ theme }) => theme.colors.white100};
+  background: -webkit-linear-gradient(28deg, rgb(18, 18, 18), rgb(31, 31, 31));
+  background: linear-gradient(28deg, rgb(18, 18, 18), rgb(31, 31, 31));
+  & h1 {
+    color: ${({ theme }) => theme.colors.white100};
   }
 `;
 
@@ -239,8 +252,6 @@ export const FaqSectionSectionContainer = styled.div`
   width: 1900px;
   padding: 40px;
   margin: 0 auto;
-  background-color: ${({ theme }) => theme.colors.black400};
-
   @media (max-width: 720px) {
     flex-direction: column;
   }
@@ -252,7 +263,6 @@ export const PurchaseSectionSectionContainer = styled.div`
   align-items: center;
   justify-content: center;
   width: 1900px;
-  background-color: ${({ theme }) => theme.colors.primary_dark};
   padding: 40px;
   @media (max-width: 720px) {
     flex-direction: column;
@@ -274,7 +284,7 @@ export const CountUpContainer = styled.div`
 `;
 
 export const FaqSectionCollapsableContainer = styled.div`
-  background-color: ${({ theme }) => theme.colors.black300};
+  background-color: ${({ theme }) => theme.colors.black500};
   padding: 24px;
   margin: 40px auto 0;
   width: 100%;

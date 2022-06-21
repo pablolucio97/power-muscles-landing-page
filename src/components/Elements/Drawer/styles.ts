@@ -6,12 +6,12 @@ interface DrawerProps {
 
 const menuAnimationVertical = keyframes`
     0%{height: 0px};
-    100%{min-height: 24vh};
+    100%{height: 24vh};
 `;
 
 const menuAnimationHorizontal = keyframes`
   0%{width: 0px};
-  100%{min-width: 280px};
+  100%{width: 280px};
 `;
 
 export const Container = styled.div<DrawerProps>`
@@ -41,8 +41,9 @@ export const MenuContainer = styled.div`
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  padding-top: 40px;
+  justify-content: space-evenly;
+  height: 100%;
+  align-items: center;
   position: relative;
   padding: 40px 24px;
 `;
@@ -50,6 +51,7 @@ export const MenuContainer = styled.div`
 export const MenuItem = styled.a`
   color: ${({ theme }) => theme.colors.black100};
   text-transform: capitalize;
+  position: relative;
   font-weight: 700;
   font-size: ${({ theme }) => theme.sizes.large};
   line-height: 32px;
@@ -62,11 +64,13 @@ export const MenuItem = styled.a`
 
 export const CloseMenuButton = styled.button`
   display: flex;
+  position: absolute;
+  right: 24px ;
   justify-content: center;
   align-items: center;
   width: 20px;
   height: 20px;
-  margin-top: -16px;
+  margin-top: -96px;
   margin-bottom: 32px;
   background-color: ${({ theme }) => theme.colors.error};
 `;

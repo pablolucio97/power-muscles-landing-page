@@ -226,12 +226,10 @@ const Home: NextPage = () => {
           <RevealFade>
             <Title
               content='Satisfação garantida'
-              className='lightTitle'
             />
           </RevealFade>
           <Text
             content='Você tem 7 dias úteis para avaliar se o treinamento faz sentido para você, caso contrário, devolvemos seu dinheiro.'
-            className='lightText'
           />
           <RevealFlip>
             <NextImage

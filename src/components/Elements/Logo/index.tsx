@@ -23,10 +23,13 @@ export function Logo({
             <Image
                 src={imageUrl}
                 alt='logo'
-                width={size === 'large' ? 56 : size === 'small' ? 32 : 48}
-                height={size === 'large' ? 56 : size === 'small' ? 32 : 48}
+                width={size === 'large' ? 72 : size === 'small' ? 40
+                    : 56}
+                height={size === 'large' ? 72 : size === 'small' ? 40
+                    : 56}
                 className={className}
                 style={style}
+                quality={100}
             />
         </Link>
     )

@@ -139,22 +139,47 @@ export const GlobalStyle = createGlobalStyle`
     }
   }
 
-  .collapsibleContent{
-    padding: 14px;
-    color: ${({ theme }) => theme.colors.secondary_light};
-    font-size: ${({ theme }) => theme.sizes.medium};
-  }
-  
   .collapsibleContainer{
-    color: ${({ theme }) => theme.colors.primary_light};
-    font-weight: 800;
+    color: ${({ theme }) => theme.colors.white100};
+    padding: 24px 0;
+    width: 100%;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  
+}
+.openedCollapsibleContainer{
+    background: -webkit-linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+  background: linear-gradient(-35deg, rgb(0, 0, 0), rgb(31, 31, 31));
+    font-size: ${({ theme }) => theme.sizes.medium};
+    color: ${({ theme }) => theme.colors.white500};
+    padding: 24px 0;
+    text-align: center;
+    font-weight: 700;
+    width: 99%;
+    border-radius: 4px;
+    text-align: center;
+    margin: 8px auto;
+}
+.collapsibleContent {
+    text-align: center;
+    width: 100%;
+    border-radius: 4px;
+    margin: 8px auto;
+ 
+     p {
+      color: ${({ theme }) => theme.colors.white500};
+      font-size: ${({ theme }) => theme.sizes.normal};
+      text-align: center;
+      width: 100%;
+      @media (max-width: 720px) {
+        font-size: ${({ theme }) => theme.sizes.small};
+      }
+    }
   }
-  .openedCollapsibleContainer{
-    color: ${({ theme }) => theme.colors.primary_light};
-    font-weight: 500;
-    padding: 14px 32px 0;
-  }
-
   
 
 

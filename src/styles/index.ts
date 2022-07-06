@@ -87,7 +87,7 @@ export const IntroductionSection = styled.section`
 export const MetricsSection = styled.section`
   display: flex;
   width: 100%;
-  height: 80vh;
+  min-height: 64vh;
   background: -webkit-linear-gradient(
     -137deg,
     rgb(31, 31, 31),
@@ -96,6 +96,9 @@ export const MetricsSection = styled.section`
   background: linear-gradient(-137deg, rgb(31, 31, 31), rgb(18, 18, 18));
   & h1 {
     color: ${({ theme }) => theme.colors.white100};
+    text-align: center;
+    width: 80%;
+    margin: 40px auto 12px;
   }
 `;
 
@@ -120,6 +123,8 @@ export const FaqSection = styled.section`
   background: linear-gradient(-137deg, rgb(31, 31, 31), rgb(18, 18, 18));
   & h1 {
     color: ${({ theme }) => theme.colors.white100};
+    text-align: center;
+    width: 100%;
   }
 `;
 
@@ -247,18 +252,8 @@ export const TestimonialsSectionContainer = styled.div`
   }
 `;
 
-export const FaqSectionSectionContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 1900px;
-  padding: 40px;
-  margin: 0 auto;
-  @media (max-width: 720px) {
-    flex-direction: column;
-  }
-`;
+
+
 
 export const PurchaseSectionSectionContainer = styled.div`
   display: flex;
@@ -275,6 +270,11 @@ export const PurchaseSectionSectionContainer = styled.div`
     width: 80%;
     text-align: center;
     margin: 24px auto 0;
+    color: ${({ theme }) => theme.colors.white500};
+  }
+
+  & button{
+    margin: 24px auto;
   }
 `;
 
@@ -285,6 +285,22 @@ export const CountUpContainer = styled.div`
   align-items: center;
   padding: 24px;
 `;
+
+
+export const FaqSectionSectionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1900px;
+  padding: 40px;
+  margin: 0 auto;
+  @media (max-width: 720px) {
+    flex-direction: column;
+  }
+`;
+
+
 
 export const FaqSectionCollapsableContainer = styled.div`
   background-color: ${({ theme }) => theme.colors.black500};
